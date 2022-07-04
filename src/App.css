@@ -7,6 +7,73 @@
   pointer-events: none;
 }
 
+.column-container{
+  display: flex;
+}
+
+.column{
+  flex: 1;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 15px;
+  width: 25%;
+  margin: 30px
+}
+
+ul{ margin: 0; padding: 0; min-height: 115px;}
+
+li{
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+
+li div {
+  display: flex;
+  margin: 20px;
+  padding: 20px;
+  justify-content: space-between;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 10px;
+}
+
+li div button {
+  color: white;
+  font-size: 40px;
+  border: none;
+  border-radius: 5px;
+  min-height: 60px;
+}
+
+.column li div .bb { background-color: rgb(204, 0, 0);}
+.column li div .bb:hover { background-color: rgb(255, 0, 0); cursor: pointer;}
+.column li div .bb:disabled { background-color: rgb(214, 61, 61);cursor: not-allowed;}
+
+.column li div .bf {background-color: green;}
+.column li div .bf:hover {background-color: rgb(0, 194, 0); cursor: pointer;}
+.column li div .bf:disabled {background-color: rgb(83, 172, 83); cursor: not-allowed;}
+
+.task-adder{text-align: start; margin-left: 30px;}
+.task-adder input{
+  height: 50px; 
+  font-size: 20px; 
+  border-radius: 10px; 
+  border: 1px solid gray;
+}
+
+.task-adder button{
+  height: 55px; 
+  font-size: 20px; 
+  border-radius: 10px; 
+  border: none;
+  background-color: blue;
+  color: white; 
+  margin-left: 10px;
+}
+
+.task-adder button:hover{background-color: rgb(52, 52, 212);}
+.task-adder button:active{background-color: rgb(116, 116, 241);}
+
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

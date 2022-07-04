@@ -1,24 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { TaskProcessColumn } from './components/taskProcessColumn';
+import { useState } from 'react';
 
 function App() {
+const [taskList, setTaskList] = useState<string[]>([]);
+const [task, setTask] = useState<string>("");
+const writing = (e:any) =>{
+  setTask(e.target.value)
+  }
+  console.log(taskList)
+
+  const addTask = (e: React.FormEvent<HTMLFormElement>) => {
+      e.preventDefault()
+      console.log("task added")
+      setTaskList([...taskList,task])
+      setTask("")
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <TaskProcessColumn taskList={taskList} setTaskList={setTaskList}/>
+      <form className="task-adder" onSubmit={addTask}>
+        <input required onChange={writing} value={task}/>
+        <button>Add Task</button>
+      </form>
     </div>
   );
 }
