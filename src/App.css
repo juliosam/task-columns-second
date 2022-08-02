@@ -16,7 +16,8 @@
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   border-radius: 15px;
   width: 25%;
-  margin: 30px
+  margin: 30px;
+  min-height: 430px;
 }
 
 ul{ margin: 0; padding: 0; min-height: 115px;}
@@ -53,11 +54,13 @@ li div button {
 .column li div .bf:disabled {background-color: rgb(83, 172, 83); cursor: not-allowed;}
 
 .task-adder{text-align: start; margin-left: 30px;}
+
 .task-adder input{
   height: 50px; 
   font-size: 20px; 
   border-radius: 10px; 
   border: 1px solid gray;
+  padding-left: 20px;
 }
 
 .task-adder button{
